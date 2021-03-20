@@ -43,8 +43,7 @@ public class ChatBot extends AppCompatActivity {
     String s;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference databaseReference;
-    FirebaseAuth firebaseAuth;
-    Date currentTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,6 @@ public class ChatBot extends AppCompatActivity {
         ed1 = findViewById(R.id.chatedit);
         ib1 = findViewById(R.id.img3);
         recyclerView.setHasFixedSize(true);
-        currentTime= Calendar.getInstance().getTime();
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
         mFirebaseDatabase=FirebaseDatabase.getInstance();
@@ -64,17 +62,15 @@ public class ChatBot extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 s = ed1.getText().toString();
-                Log.d("Test",s);
                 String mdata=databaseReference.push().getKey();
                 Map<String, String> data = new HashMap<>();
-                data.put("datetime",currentTime.toString());
-                data.put("id", firebaseAuth.getCurrentUser().getUid());
+                data.put("datetime","0");
+                data.put("id", "0");
                 data.put("message", s);
                 data.put("order","user");
-
                 JSONObject jsonData = new JSONObject(data);
-                databaseReference.child(mdata).setValue(jsonData);
-                //databaseReference.push().setValue(data);
+                databaseReference.child(mdata).setValue(data);
+                ed1.setText("");
             }
         });
 

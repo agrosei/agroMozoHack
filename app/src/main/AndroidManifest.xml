@@ -30,7 +30,6 @@
         <activity android:name=".activity.SingleCropInfoActivity" />
         <activity android:name=".activity.CropActivity" />
         <activity android:name=".MainActivity">
-
         </activity>
         <activity android:name=".activity.ChatBot" />
     </application>

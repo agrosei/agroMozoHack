@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:shadowColor="@android:color/holo_purple"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        app:cardCornerRadius="15dp"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardCornerRadius="20dp"
+                >
+                <ImageView
+                    android:id="@+id/crops_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/crops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paddy"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="3dp"/>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="3dp"
+                android:text="2-3 months"
+                android:drawablePadding="3dp"
+                app:drawableLeftCompat="@drawable/ic_baseline_access_time_24" />
+            <TextView
+                android:id="@+id/recommended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="3dp"
+                android:drawablePadding="3dp"
+                android:text="70% recommended"
+                app:drawableLeftCompat="@drawable/ic_baseline_call_made_24" />
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_margin="10dp"
+                android:progress="40"
+                android:progressBackgroundTint="#FFFFFF"
+                android:progressTint="#8acc26"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

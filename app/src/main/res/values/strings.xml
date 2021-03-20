@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Agrosei</string>
+    <string name="date">Date</string>
+    <string name="news">News</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et nibh iaculis, dictum augue sed, cursus neque. Aliquam dapibus mauris nibh, elementum faucibus nibh placerat vel. Etiam sit amet lectus.</string>
+</resources>

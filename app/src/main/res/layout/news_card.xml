@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/card"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:shadowColor="@android:color/holo_purple"
+    android:shadowDx="10"
+    android:shadowDy="10"
+    android:shadowRadius="5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/img_card_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_card_news_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="News Heading"
+                android:lines="2"
+                android:layout_gravity="top"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_card_news_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="News Content"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/dta"
+                android:textSize="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="dateTime"
+                android:layout_margin="1dp"
+                android:gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        
+
+    
+
+</androidx.cardview.widget.CardView>

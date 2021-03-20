@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.statisticsFragment"
+    android:background="#f4f4f4">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="#32a852"/>
+
+    <TextView
+        android:id="@+id/dummy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It's a sunny day!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stats_card_layout"
+        android:layout_below="@id/dummy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        android:padding="10dp"
+        android:elevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="10"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_weight="5"
+                    android:id="@+id/temp_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/img_temp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/bg2"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/ic_outline_ac_unit_24"/>
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_toRightOf="@+id/img_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="62 F"
+                        android:textSize="20sp"
+                        android:layout_margin="3dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_below="@id/tv_temp"
+                        android:layout_toRightOf="@+id/img_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temperature"
+                        android:layout_margin="3dp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="5"
+                    android:id="@+id/humidity_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/img_humidity"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/bg1"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/humidity"/>
+                    <TextView
+                        android:id="@+id/tv_humidity"
+                        android:layout_toRightOf="@+id/img_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="61 %"
+                        android:textSize="20sp"
+                        android:layout_margin="3dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_below="@id/tv_humidity"
+                        android:layout_toRightOf="@+id/img_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:layout_margin="3dp"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <RelativeLayout
+
+                    android:id="@+id/rainfall_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    >
+                    <ImageView
+                        android:id="@+id/img_rainfall"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/bg3"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/rain"/>
+                    <TextView
+                        android:id="@+id/tv_rainfall"
+                        android:layout_toRightOf="@+id/img_rainfall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0mm"
+                        android:textSize="20sp"
+                        android:layout_margin="3dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_below="@id/tv_rainfall"
+                        android:layout_toRightOf="@+id/img_rainfall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rainfall"
+                        android:layout_margin="3dp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/windspeed_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    >
+                    <ImageView
+                        android:background="@drawable/bg4"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/wind"
+                        android:id="@+id/img_windspeed"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="3dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_windspeed"
+                        android:layout_toRightOf="@+id/img_windspeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.9m/s"
+                        android:textSize="20sp"
+                        android:layout_margin="3dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_below="@id/tv_windspeed"
+                        android:layout_toRightOf="@+id/img_windspeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Windspeed"
+                        android:layout_margin="3dp"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_card_layout"
+        app:cardBackgroundColor="#32a852"
+        app:cardCornerRadius="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnosis Issues with Crop"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:drawablePadding ="50dp"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                app:drawableStartCompat="@drawable/ic_baseline_access_time_24"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

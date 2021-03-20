@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SingleCropInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="10"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="5"
+
+                >
+                <TextView
+                    android:id="@+id/tv_crop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paddy"
+
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginHorizontal="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ispum"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginHorizontal="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seed Rate"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginHorizontal="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_seed_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ispum"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginHorizontal="10dp"
+                    />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_single_crop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/rice"
+                android:padding="10dp"
+                android:layout_weight="5"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seed Treatment"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_seed_treatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum"
+            android:layout_marginVertical="5dp"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seed Preparation"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_seed_pep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum"
+            android:layout_marginVertical="5dp"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
+
+

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.insignia.agrosei.CropDetect.DetectCrop;
 import com.insignia.agrosei.R;
 import com.insignia.agrosei.activity.ChatBot;
 import com.insignia.agrosei.activity.MoreActivity;
@@ -80,6 +81,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(),NewsActivity.class);
+                startActivity(i);
+            }
+        });
+        veggie_finder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetectCrop.class);
+                i.putExtra("type","veggieFinder");
                 startActivity(i);
             }
         });

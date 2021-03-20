@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -53,8 +54,8 @@ public class ChatBot extends AppCompatActivity {
         ed1 = findViewById(R.id.chatedit);
         ib1 = findViewById(R.id.img3);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-
+        LinearLayoutManager l = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(l);
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=mFirebaseDatabase.getReference("Messaging");
         eid1=0;

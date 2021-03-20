@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.insignia.agrosei.CropDetect.DetectCrop;
 import com.insignia.agrosei.R;
 import com.insignia.agrosei.activity.ChatBot;
 import com.insignia.agrosei.activity.NewsActivity;
@@ -67,7 +68,13 @@ public class MoreAdapter extends RecyclerView.Adapter<MoreAdapter.ViewHolder> {
                     i = new Intent(context, ChatBot.class);
                     context.startActivity(i);
                 }
-
+                if(position == 5)
+                {
+                    Intent i;
+                    i = new Intent(context, DetectCrop.class);
+                    i.putExtra("type","disease");
+                    context.startActivity(i);
+                }
 
             }
         });

@@ -1,0 +1,3 @@
+0 black soil
+1 red soil
+2 alluvial soil

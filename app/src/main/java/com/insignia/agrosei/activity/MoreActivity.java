@@ -31,8 +31,6 @@ public class MoreActivity extends AppCompatActivity {
         Data2.add(new MoreModel("https://valueindia.net/wp-content/uploads/2020/07/Apeda-logo-web.jpg","Seed Certifications","buy and sell certified seeds"));
         Data2.add(new MoreModel("https://live.staticflickr.com/7006/6621416427_8504865e6a_z.jpg","Pest and Diseases Control","Pest and Diseases Control Measures"));
 
-
-
         adapter = new MoreAdapter(this,Data2);
         recycler.setHasFixedSize(true);
         recycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));

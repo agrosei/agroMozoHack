@@ -27,7 +27,7 @@ public class CropActivity extends AppCompatActivity {
         Data2.add("BMW");
         Data2.add("Volvo");
         Data2.add("BMW");
-        adapter=new GridAdapter(Data2);
+        adapter=new GridAdapter(getApplicationContext(),Data2);
         recyclerView.setAdapter(adapter);
     }
 }

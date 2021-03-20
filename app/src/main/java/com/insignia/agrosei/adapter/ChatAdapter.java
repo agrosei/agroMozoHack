@@ -36,9 +36,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         if(Data1.get(position).getEid().equals("user")){
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)holder.t1.getLayoutParams();
             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            params.setMargins(50,0,0,0);
         }else {
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)holder.t1.getLayoutParams();
             params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+            params.setMargins(0,0,50,0);
         }
     }
 

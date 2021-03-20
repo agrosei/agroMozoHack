@@ -25,6 +25,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.insignia.agrosei.CropDetect.DetectCrop;
 import com.insignia.agrosei.activity.TimeLineActivity;
 import com.insignia.agrosei.fragment.HomeFragment;
 import com.insignia.agrosei.fragment.ProfileFragment;
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
         timeline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =new Intent(getApplicationContext(), TimeLineActivity.class);
+                Intent i =new Intent(getApplicationContext(), DetectCrop.class);
+                i.putExtra("type","soil");
                 startActivity(i);
             }
         });

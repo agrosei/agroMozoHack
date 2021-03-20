@@ -1,0 +1,6 @@
+0 lady finger
+1 carrot
+2 tomato
+3 potato
+4 brinjal
+5 lemon

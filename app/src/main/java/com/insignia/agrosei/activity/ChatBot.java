@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -63,17 +64,16 @@ public class ChatBot extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 s = ed1.getText().toString();
-
-                String mdata=databaseReference.push().getKey();
-
-                Map<String, String> data = new HashMap<>();
-                data.put("datetime",currentTime.toString());
-                data.put("id", firebaseAuth.getCurrentUser().getUid());
-                data.put("message", s);
-                data.put("order","user");
-
-                JSONObject jsonData = new JSONObject(data);
-                databaseReference.child(mdata).setValue(data);
+                Log.d("Test",s);
+//                String mdata=databaseReference.push().getKey();
+//                Map<String, String> data = new HashMap<>();
+//                data.put("datetime",currentTime.toString());
+//                data.put("id", firebaseAuth.getCurrentUser().getUid());
+//                data.put("message", s);
+//                data.put("order","user");
+//
+//                JSONObject jsonData = new JSONObject(data);
+//                databaseReference.child(mdata).setValue(data);
             }
         });
 

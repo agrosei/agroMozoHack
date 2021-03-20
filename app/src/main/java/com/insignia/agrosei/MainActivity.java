@@ -8,13 +8,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +25,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.insignia.agrosei.activity.TimeLineActivity;
 import com.insignia.agrosei.fragment.HomeFragment;
 import com.insignia.agrosei.fragment.ProfileFragment;
 import com.insignia.agrosei.fragment.statisticsFragment;
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;
     CustomBottomNavigationView navBar;
+    FloatingActionButton timeline;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.frameLayout,fragment1, "1").commit();
 
         navBar = findViewById(R.id.navigation);
+        timeline = findViewById(R.id.fab);
+        timeline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(getApplicationContext(), TimeLineActivity.class);
+                startActivity(i);
+            }
+        });
 
         if (ContextCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){

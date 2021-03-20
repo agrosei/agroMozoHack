@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,6 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCs4VWY23khvpjLTt_TTFWy69VY2QwV4Xg" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".model.Map_locate">
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyCs4VWY23khvpjLTt_TTFWy69VY2QwV4Xg" />
+        </activity>
         <activity android:name=".activity.DiseaseActivity"></activity>
         <activity android:name=".activity.TimeLineActivity" />
         <activity android:name=".activity.webNews" />

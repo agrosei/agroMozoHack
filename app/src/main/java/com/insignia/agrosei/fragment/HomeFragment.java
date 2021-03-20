@@ -19,6 +19,7 @@ import com.insignia.agrosei.R;
 import com.insignia.agrosei.activity.ChatBot;
 import com.insignia.agrosei.activity.MoreActivity;
 import com.insignia.agrosei.activity.NewsActivity;
+import com.insignia.agrosei.model.Map_locate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,6 +107,13 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), ChatBot.class);
                 startActivity(i);
+            }
+        });
+
+        farms_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Map_locate.class));
             }
         });
 

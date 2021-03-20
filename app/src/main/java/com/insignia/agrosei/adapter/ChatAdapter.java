@@ -1,5 +1,6 @@
 package com.insignia.agrosei.adapter;
 
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,12 +36,13 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         holder.t1.setText(Data1.get(position).getEtext());
         if(Data1.get(position).getEid().equals("user")){
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)holder.t1.getLayoutParams();
+            holder.t1.setBackgroundResource(R.drawable.edittext);
+            holder.t1.setTextColor(Color.parseColor("#ffffff"));
             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-            params.setMargins(50,0,0,0);
         }else {
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)holder.t1.getLayoutParams();
+            holder.t1.setBackgroundResource(R.drawable.edittextt);
             params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-            params.setMargins(0,0,50,0);
         }
     }
 

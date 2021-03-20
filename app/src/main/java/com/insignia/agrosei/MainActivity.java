@@ -29,6 +29,7 @@ import com.insignia.agrosei.CropDetect.DetectCrop;
 import com.insignia.agrosei.activity.TimeLineActivity;
 import com.insignia.agrosei.fragment.HomeFragment;
 import com.insignia.agrosei.fragment.ProfileFragment;
+import com.insignia.agrosei.fragment.ShopFragment;
 import com.insignia.agrosei.fragment.statisticsFragment;
 import com.insignia.agrosei.model.CustomBottomNavigationView;
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     final Fragment fragment1 = new HomeFragment();
     final Fragment fragment2 = new statisticsFragment();
     final Fragment fragment3 = new ProfileFragment();
+    final Fragment fragment4 = new ShopFragment();
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;
     CustomBottomNavigationView navBar;
@@ -91,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.Stats:
                     fm.beginTransaction().replace(R.id.frameLayout,fragment2).commit();
+                    return true;
+                case R.id.Shop:
+                    fm.beginTransaction().replace(R.id.frameLayout,fragment4).commit();
                     return true;
 
             }

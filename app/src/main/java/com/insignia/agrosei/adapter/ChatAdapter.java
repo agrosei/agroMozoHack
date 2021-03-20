@@ -33,7 +33,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.t1.setText(Data1.get(position).getEtext());
-
         if(Data1.get(position).getEid().equals("user")){
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)holder.t1.getLayoutParams();
             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);

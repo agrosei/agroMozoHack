@@ -57,6 +57,7 @@
                 android:layout_gravity="bottom"
                 android:text="News Content"
                 android:layout_margin="5dp"
+                android:maxLines="3"
                 />
             <TextView
                 android:id="@+id/dta"

@@ -65,15 +65,16 @@ public class ChatBot extends AppCompatActivity {
             public void onClick(View v) {
                 s = ed1.getText().toString();
                 Log.d("Test",s);
-//                String mdata=databaseReference.push().getKey();
-//                Map<String, String> data = new HashMap<>();
-//                data.put("datetime",currentTime.toString());
-//                data.put("id", firebaseAuth.getCurrentUser().getUid());
-//                data.put("message", s);
-//                data.put("order","user");
-//
-//                JSONObject jsonData = new JSONObject(data);
-//                databaseReference.child(mdata).setValue(data);
+                String mdata=databaseReference.push().getKey();
+                Map<String, String> data = new HashMap<>();
+                data.put("datetime",currentTime.toString());
+                data.put("id", firebaseAuth.getCurrentUser().getUid());
+                data.put("message", s);
+                data.put("order","user");
+
+                JSONObject jsonData = new JSONObject(data);
+                databaseReference.child(mdata).setValue(jsonData);
+                //databaseReference.push().setValue(data);
             }
         });
 

@@ -68,11 +68,11 @@ public class NewsActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 models.clear();
                 for(DataSnapshot ds:snapshot.getChildren()){
-                    NewsModel modelhistory=ds.getValue(NewsModel.class);
+                    NewsModel modelhistory = ds.getValue(NewsModel.class);
                     models.add(modelhistory);
-                    adapter=new NewsAdapter(NewsActivity.this,models);
-                    recycler.setAdapter(adapter);
                 }
+                adapter = new NewsAdapter(NewsActivity.this,models);
+                recycler.setAdapter(adapter);
             }
 
             @Override

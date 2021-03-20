@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.insignia.agrosei.R;
 import com.insignia.agrosei.activity.TimeLineActivity;
+import com.insignia.agrosei.model.CropData;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -25,13 +26,13 @@ import java.util.HashMap;
 
 public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
-    public ArrayList<?> Data2;
+    public ArrayList<CropData> Data2;
     HashMap<Integer,ViewHolder> Card=new HashMap<>();
      public Context context;
     //  public List<UploadTask> uploadTasks;
     Activity thisActivity;
 
-    public GridAdapter(Context context, ArrayList<?> data) {
+    public GridAdapter(Context context, ArrayList<CropData> data) {
         Data2 = data;
         this.context = context;
         //   this.context = context;
@@ -47,16 +48,15 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.cropName.setText("Crop Name");
-        holder.time.setText("Time");
+        holder.cropName.setText(Data2.get(position).getEcrop());
+        holder.time.setText(Data2.get(position).getEtime());
         holder.recommended.setText("Recommended");
-        holder.cropProgress.setProgress(75);
-        Picasso.get().load("https://kj1bcdn.b-cdn.net/media/8468/hybrid-paddy-godavari-inuk405.jpg").fit().into(holder.cropImg);
+        holder.cropProgress.setProgress(Data2.get(position).getEprogress());
+        Picasso.get().load(Data2.get(position).getEimg()).fit().into(holder.cropImg);
         holder.cropCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(context, TimeLineActivity.class);
-                context.startActivity(i);
+                context.startActivity(new Intent(context,TimeLineActivity.class));
             }
         });
     }

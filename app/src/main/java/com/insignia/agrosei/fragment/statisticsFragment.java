@@ -1,13 +1,16 @@
 package com.insignia.agrosei.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.insignia.agrosei.CropDetect.DetectCrop;
 import com.insignia.agrosei.R;
 
 /**
@@ -26,6 +29,7 @@ public class statisticsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    CardView cardView;
     public statisticsFragment() {
         // Required empty public constructor
     }
@@ -45,6 +49,7 @@ public class statisticsFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -61,6 +66,18 @@ public class statisticsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_statistics, container, false);
+
+        View v =  inflater.inflate(R.layout.fragment_statistics, container, false);
+        cardView = v.findViewById(R.id.stats_card_layout);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(getActivity(), DetectCrop.class);
+                i.putExtra("type","disease");
+                startActivity(i);
+            }
+        });
+        return v;
     }
 }

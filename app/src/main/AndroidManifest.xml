@@ -27,24 +27,26 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="AIzaSyCs4VWY23khvpjLTt_TTFWy69VY2QwV4Xg" />
         </activity>
-        <activity android:name=".activity.DiseaseActivity"></activity>
+        <activity android:name=".activity.DiseaseActivity" />
         <activity android:name=".activity.TimeLineActivity" />
         <activity android:name=".activity.webNews" />
         <activity android:name=".activity.MoreActivity" />
-        <activity android:name=".activity.Login"></activity>
-        <activity android:name=".activity.Register" />
-        <activity android:name=".activity.NewsActivity" />
-        <activity android:name=".activity.SingleNewsActivity" />
-        <activity android:name=".activity.SingleCropInfoActivity" />
-        <activity android:name=".activity.CropActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CropDetect.DetectCrop"></activity>
+        <activity android:name=".activity.Register" />
+        <activity android:name=".activity.NewsActivity" />
+        <activity android:name=".activity.SingleNewsActivity" />
+        <activity android:name=".activity.SingleCropInfoActivity" />
+        <activity android:name=".activity.CropActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".CropDetect.DetectCrop" />
         <activity android:name=".activity.ChatBot" />
     </application>
 

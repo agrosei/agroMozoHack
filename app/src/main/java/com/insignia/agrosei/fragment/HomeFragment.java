@@ -71,10 +71,12 @@ public class HomeFragment extends Fragment {
         more = v.findViewById(R.id.tv_more);
 
         List<SlideModel> slideModels = new ArrayList<>();
-        slideModels.add(new SlideModel(R.drawable.rice,"1 Image", ScaleTypes.CENTER_CROP));
-        slideModels.add(new SlideModel("https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg","2 Image",ScaleTypes.CENTER_CROP));
-        slideModels.add(new SlideModel("https://live.staticflickr.com/7006/6621416427_8504865e6a_z.jpg","3 Image",ScaleTypes.CENTER_CROP));
-        slideModels.add(new SlideModel("https://c4.wallpaperflare.com/wallpaper/662/618/496/natur-2560x1600-sceneries-wallpaper-preview.jpg","4 Image",ScaleTypes.CENTER_CROP));
+        slideModels.add(new SlideModel("https://cdn.discordapp.com/attachments/822116671002902553/822960289213055006/Ten-Ways-To-Promote-Your-Homestead.png","Poultry farming guide",ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://cdn.discordapp.com/attachments/822116671002902553/822959786382327808/1286504.png","Mitti ki jaan kaisaan ki shaan",ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel("https://cdn.discordapp.com/attachments/822116671002902553/822959502080999474/fto-mediakit2020.png","Farmtario-farmers resource book", ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel("https://cdn.discordapp.com/attachments/822116671002902553/822960228890968084/marketing-tips-banner.png","Ultimate farming tips",ScaleTypes.FIT));
+
+
         imageSlider.setImageList(slideModels,ScaleTypes.CENTER_CROP);
         imageSlider.stopSliding();
 

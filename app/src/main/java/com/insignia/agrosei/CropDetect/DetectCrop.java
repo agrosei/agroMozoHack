@@ -98,9 +98,11 @@ public class DetectCrop extends AppCompatActivity {
             }
             case "soil":{
                 heading.setText("Soil Classification");
+                break;
             }
             case "disease":{
                 heading.setText("Diease Diagnosis");
+                break;
             }
 
         }

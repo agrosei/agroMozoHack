@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+<!--<div class="se-pre-con"></div>-->
+<div class="theme-layout">
+	<section>
+		<div class="gap gray-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row merged20" id="page-contents">
+							
+							<div class="col-lg-9">
+								<div class="central-meta">
+									<div class="messages">
+										<h5 class="f-title"><i class="ti-bell"></i>All Messages <span class="more-options"><i class="fa fa-ellipsis-h"></i></span></h5>
+										<div class="message-box">
+											
+											<div class="peoples-mesg-box" >
+												<div class="conversation-head">
+													<figure><img src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" alt=""></figure>
+													<span id="name"><i>online</i></span>
+												</div>
+												<ul class="chatting-area" id="test">
+													
+												</ul>
+												<div class="message-text-container">
+													<form >
+														<textarea id="message_area" placeholder="Type your message here"></textarea>
+														<button title="send" onclick="send()"><i class="fa fa-paper-plane"></i></button>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div><!-- centerl meta -->
+							
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<div class="bottombar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<span class="copyright">© Agroசெய் 2021. All rights reserved.</span>
+					<img width="" height="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- jQuery 3 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDOv7wp6Em1ttrroEFbl65UPe65hyi_hVI",
+    authDomain: "agrosei.firebaseapp.com",
+    databaseURL: "https://agrosei-default-rtdb.firebaseio.com",
+    projectId: "agrosei",
+    storageBucket: "agrosei.appspot.com",
+    messagingSenderId: "393572705544",
+    appId: "1:393572705544:web:b4bb5bcf701981adf9b8bd",
+    measurementId: "G-Z7L65MTCY7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var query = firebase.database().ref("Messaging");
+  query.on("value", function (snapshot) {
+	var ja=JSON.parse(JSON.stringify(snapshot));
+	console.log(ja);
+	drop()
+	for( let prop in ja ){
+		if(ja[prop].order==="user"){
+			console.log('in');
+			$('<li class="you"><figure><img width="31.9" height="31.9"src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" alt=""></figure><p>'+ja[prop].message+'</p></li>').appendTo('#test');
+			
+		}
+		else{
+			console.log('out');
+			$('<li class="me"><figure><img width="31.9" height="31.9" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" alt=""></figure><p>'+ja[prop].message+'</p></li>').appendTo('#test');
+		}
+	}
+  });
+  function send(){
+	  var msg=document.getElementById("message_area").value;
+	  console.log(msg);
+	  var order="expert   ";
+	  var id="userID";
+	  var dt= (Date(Date.now())).toString();
+	  var data= {"message":msg,"id":id,"datetime":dt,"order":order};
+	  query.push(data);
+  }
+  function drop(){
+	document.getElementById("test").innerHTML = "";
+  }
+
+</script>
+
+</body>	
+</html>
